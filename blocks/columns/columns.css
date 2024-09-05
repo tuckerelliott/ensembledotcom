@@ -17,6 +17,22 @@
 
 .columns > div > .columns-img-col img {
   display: block;
+  object-fit: cover;
+  max-height: 520px; 
+}
+
+.columns > div > div:not(.columns-img-col) p:nth-of-type(1) {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0;
+}
+
+.columns > div > div:not(.columns-img-col) p:nth-of-type(n+2) {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 2rem;
 }
 
 @media (width >= 900px) {
@@ -29,5 +45,15 @@
   .columns > div > div {
     flex: 1;
     order: unset;
+  }
+
+  .columns > div > div:not(.columns-img-col) p:nth-of-type(1) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .columns > div > div:not(.columns-img-col) p:nth-of-type(n+2) {
+    font-size: 18px;
+    line-height: 24px;
   }
 }
