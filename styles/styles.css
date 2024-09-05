@@ -1,0 +1,329 @@
+/* stylelint-disable rule-empty-line-before */
+/* stylelint-disable media-feature-range-notation */
+/* stylelint-disable declaration-block-no-duplicate-properties */
+/* stylelint-disable color-function-notation */
+/* stylelint-disable alpha-value-notation */
+/* stylelint-disable comment-empty-line-before */
+/* stylelint-disable custom-property-empty-line-before */
+/*
+ * Copyright 2020 Adobe. All rights reserved.
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  /* colors */
+  --link-color: #035fe6;
+  --link-hover-color: #136ff6;
+  --background-color: white;
+  --light-color: #eee;
+  --dark-color: #ccc;
+  --text-color: black;
+
+  --color-white: #fff;
+  --color-black: #000;
+
+  /* fonts */
+  --body-font-family: roboto, roboto-fallback;
+  --heading-font-family: var(--body-font-family);
+  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono',
+    monospace;
+
+  /* body sizes */
+  --body-font-size-m: 22px;
+  --body-font-size-s: 18px;
+  --body-font-size-xs: 16px;
+
+  /* heading sizes */
+  --heading-font-size-xxl: 48px;
+  --heading-font-size-xl: 40px;
+  --heading-font-size-l: 32px;
+  --heading-font-size-m: 24px;
+  --heading-font-size-s: 20px;
+  --heading-font-size-xs: 18px;
+
+  /* nav height */
+  --nav-height: 64px;
+  --max-width: 1400px;
+}
+
+@font-face {
+  font-family: roboto-fallback;
+  size-adjust: 100.06%;
+  ascent-override: 95%;
+  src: local('Arial');
+}
+
+@media (width >= 900px) {
+  :root {
+    --heading-font-size-xxl: 60px;
+    --heading-font-size-xl: 48px;
+    --heading-font-size-l: 36px;
+    --heading-font-size-m: 30px;
+    --heading-font-size-s: 24px;
+    --heading-font-size-xs: 22px;
+  }
+}
+
+body {
+  font-size: var(--body-font-size-m);
+  margin: 0;
+  font-family: var(--body-font-family);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  display: none;
+}
+
+body.appear {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  scroll-margin: calc(var(--nav-height) + 1em);
+}
+
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+h2 {
+  font-size: var(--heading-font-size-xl);
+}
+h3 {
+  font-size: var(--heading-font-size-l);
+}
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
+
+p,
+dl,
+ol,
+ul,
+pre,
+blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+code,
+pre {
+  font-family: var(--fixed-font-family);
+  font-size: var(--body-font-size-s);
+}
+
+code {
+  padding: 0.125em;
+}
+
+pre {
+  overflow: scroll;
+}
+
+main pre {
+  background-color: var(--light-color);
+  padding: 1em;
+  border-radius: 0.25em;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+/* links */
+a:any-link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--link-hover-color);
+}
+
+/* buttons */
+a.button:any-link,
+button,
+.services-section .default-content-wrapper a {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #000;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  font-style: normal;
+  text-align: center;
+}
+
+a.button:hover,
+a.button:focus,
+button:hover,
+button:focus,
+.services-section .default-content-wrapper a:hover,
+.services-section .default-content-wrapper a:focus {
+  color: var(--color-white);
+  border: 1px solid transparent;
+  background-color: rgba(255, 142, 47, 1);
+  transition-duration: 0.3s;
+  text-decoration: none;
+}
+
+button:disabled,
+button:disabled:hover {
+  background-color: var(--light-color);
+  cursor: unset;
+}
+
+main img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.icon {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+}
+
+.icon img {
+  height: 100%;
+  width: 100%;
+}
+
+/* sections */
+main .section {
+  padding: 48px 16px;
+}
+
+@media (width >= 600px) {
+  main .section {
+    padding: 48px 32px;
+  }
+}
+
+@media (width >= 900px) {
+  .section > div {
+    max-width: var(--max-width);
+    margin: auto;
+  }
+}
+
+/* section metadata */
+main .section.light,
+main .section.highlight {
+  background-color: rgba(239, 243, 244, 1);
+}
+
+main .section.contact {
+  padding: 2rem 32px;
+  text-align: center;
+}
+
+@media (width >= 900px) {
+  main .section.contact {
+    padding: 6rem 32px;
+    text-align: center;
+  }
+}
+
+main .section.contact h4 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+main .section.contact .button-container {
+  margin-top: 2.5rem;
+}
+
+main .section.contact .button-container a {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+  color: var(--color-black);
+  width: fit-content;
+  background-color: rgba(255, 142, 47, 1);
+  border: 1px solid transparent;
+}
+
+main .section.contact .button-container a:hover {
+  text-decoration: none;
+  border: 1px solid #000;
+  background-color: transparent;
+  color: var(--color-white);
+  transition-duration: 0.3s;
+  color: var(--color-black);
+}
+
+/* section services */
+.services-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(rgb(239, 243, 244), rgba(239, 243, 244, 0));
+  background-color: transparent;
+}
+
+.services-section > div {
+  width: 100%;
+  margin: 0;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.services-section .default-content-wrapper p {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.75rem;
+  width: 90%;
+  position: sticky;
+  top: 80px;
+  padding-top: 1.5rem;
+  margin: 0;
+}
+
+@media (min-width: 1300px) {
+  .services-section {
+    flex-direction: row;
+  }
+
+  .services-section > div {
+    width: 50%;
+    max-width: calc(var(--max-width) / 2);
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section .default-content-wrapper p {
+    width: 100%;
+    font-size: 18px;
+  }
+}
